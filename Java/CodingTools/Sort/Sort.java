@@ -6,7 +6,7 @@ public class Sort {
 		
 
 	}
-	//é€‰æ‹©æ’åº
+	//Ñ¡ÔñÅÅĞò
 	public static void select_sort(int array[],int lenth){
 
 		   for(int i = 0; i < lenth - 1; i++){
