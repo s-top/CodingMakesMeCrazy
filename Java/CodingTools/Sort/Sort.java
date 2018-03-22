@@ -6,7 +6,7 @@ public class Sort {
 		
 
 	}
-	//选择排序
+	//选择排序的实现
 	public static void select_sort(int array[],int lenth){
 
 		   for(int i = 0; i < lenth - 1; i++){
