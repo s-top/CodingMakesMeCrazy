@@ -2,18 +2,13 @@ package com.lzp.Demo.WangYi;
 
 import java.util.*;
 
-public class ²ÊÉ«µÄ×©¿é {
+public class Main {
 
 	public static void main(String[] args) {
 		/*
-		 * ²ÊÉ«µÄ×©¿é
-		 * 
-		 * ÊäÈë°üÀ¨Ò»¸ö×Ö·û´®s,×Ö·û´®sµÄ³¤¶Èlength(1 ¡Ü length ¡Ü 50),sÖĞµÄÃ¿Ò»¸ö×Ö·û¶¼ÎªÒ»¸ö´óĞ´×ÖÄ¸(Aµ½Z)¡£
-		 * ÀıÈç: s = "ABAB",ÄÇÃ´Ğ¡Ò×ÓĞÁùÖÖÅÅÁĞµÄ½á¹û:
+		    s = "ABAB"
 			"AABB","ABAB","ABBA","BAAB","BABA","BBAA"
-			ÆäÖĞÖ»ÓĞ"AABB"ºÍ"BBAA"Âú×ã×î¶àÖ»ÓĞÒ»¶Ô²»Í¬ÑÕÉ«µÄÏàÁÚ×©¿é¡£ 
-		 *
-		 *Ë¼Â·£ºÖ»ÓĞÒ»ÖÖ»òÕßÁ½ÖÖµÄ×ÖÄ¸²ÅÓĞ´ğ°¸1»òÕß2£¬ÆäËûÇé¿ö½á¹û¶¼Îª0.
+		    "AABB"å’Œ"BBAA"
 		 */
 
 		Scanner in = new Scanner(System.in);
@@ -21,8 +16,7 @@ public class ²ÊÉ«µÄ×©¿é {
 		String str = in.nextLine();
 		
 		Map<String,Integer> maps = new HashMap<String,Integer>();
-		
-		//Í³¼Æ×ÖÄ¸³öÏÖµÄ´ÎÊı£¬Í¨¹ımapµÄ³¤¶ÈÍ³¼Æ×ÖÄ¸µÄÖÖÀà
+
 		for(int i = 0; i < str.length(); i++){
 			String key = String.valueOf((str.charAt(i)));
 			if(!maps.containsKey(key)) {

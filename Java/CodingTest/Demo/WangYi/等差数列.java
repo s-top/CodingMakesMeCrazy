@@ -1,19 +1,14 @@
 package com.lzp.Demo.WangYi;
 import java.util.*;
 
-public class 等差数列 {
+public class Main {
 
 	public static void main(String[] args) {
 		/*
 		 * 2018-03-22
-		 *判定等差数列
-		 *
-		 *输入:
 		 *	3
 			3 1 2
-		 *输出:
 		 *  Possible
-		 *或者:
 		 *	Impossible
 		 *
 		 */
