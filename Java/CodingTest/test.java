@@ -32,3 +32,36 @@ public class Solution {
         return res;
     }
 }
+链接：https://www.nowcoder.com/questionTerminal/1624bc35a45c42c0bc17d17fa0cba788
+来源：牛客网
+
+public ArrayList<Integer> maxInWindows(int [] num, int size)
+    {
+        ArrayList<Integer> ret = new ArrayList<>();
+        if (num == null) {
+            return ret;
+        }
+        if (num.length < size || size < 1) {
+            return ret;
+        }
+         
+        LinkedList<Integer> indexDeque = new LinkedList<>();
+        for (int i = 0; i < size - 1; i++) {
+            while (!indexDeque.isEmpty() && num[i] > num[indexDeque.getLast()]) {
+                indexDeque.removeLast();
+            }
+            indexDeque.addLast(i);
+        }
+         
+        for (int i = size - 1; i < num.length; i++) {
+            while (!indexDeque.isEmpty() && num[i] > num[indexDeque.getLast()]) {
+                indexDeque.removeLast();
+            }
+            indexDeque.addLast(i);
+            if (i - indexDeque.getFirst() + 1 > size) {
+                indexDeque.removeFirst();
+            }
+            ret.add(num[indexDeque.getFirst()]);
+        }
+        return ret;
+    }
