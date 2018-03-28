@@ -66,4 +66,37 @@ public ArrayList<Integer> maxInWindows(int [] num, int size)
         return ret;
     }
 
-public class Item { public static void main(String args[]) { int array[] = {1, -2, 3, 10, -4, 7, 2, -5}; System.out.println(findMax(array)); } public static int findMax(int array[]){ //加上约束条件，防止当数组为空时造成数组越界 if (array.length == 0) { return 0; } int max = array[0]; int sum = 0; for(int i=0; i<array.length; i++){ //如果加上某个元素sum>=0的话，就加； //当数组全为负数的时候只要有加法就一定比原来的数小,此时就相当于找出数组内最大的数 if(sum >= 0) { sum += array[i]; } else{ sum = array[i]; //否则从当前位置重新计算 } if(sum > max){ max = sum; } } return max; } }public class Item { public static void main(String args[]) { int array[] = {1, -2, 3, 10, -4, 7, 2, -5}; System.out.println(findMax(array)); } public static int findMax(int array[]){ //加上约束条件，防止当数组为空时造成数组越界 if (array.length == 0) { return 0; } int max = array[0]; int sum = 0; for(int i=0; i<array.length; i++){ //如果加上某个元素sum>=0的话，就加； //当数组全为负数的时候只要有加法就一定比原来的数小,此时就相当于找出数组内最大的数 if(sum >= 0) { sum += array[i]; } else{ sum = array[i]; //否则从当前位置重新计算 } if(sum > max){ max = sum; } } return max; } }
+public class huawei {
+
+
+   public static void main(String[] args) {
+       Scanner input = new Scanner(System.in);
+       String s1 = input.nextLine();
+       //qwertyuiopasdfghjklzxcvbnm
+       //abcdefghijklmnopqrstuvwxyz
+
+       System.out.println(change(s1));
+    }
+
+
+    public static String change(String s){
+        String ziran = "abcdefghijklmnopqrstuvwxyz";
+        String biaozhun = "qwertyuiopasdfghjklzxcvbnm";
+        String news1 ="";
+        for (int i=0;i<s.length();i++){
+
+            char ch1 = s.charAt(i);
+
+            if (ziran.indexOf(ch1)!=-1){
+                int index = ziran.indexOf(ch1);
+                ch1 = biaozhun.substring(index,index+1).charAt(0);
+
+            }else if(ziran.toUpperCase().indexOf(ch1)!=-1){
+                int index = ziran.toUpperCase().indexOf(ch1);
+                ch1 = biaozhun.toUpperCase().substring(index,index+1).charAt(0);
+            }
+            news1 = news1+ch1;
+        }
+        return news1;
+    }
+}
